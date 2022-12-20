@@ -10,6 +10,8 @@ const url = `https://api.twitter.com/2/users/${userId}/following`;
 const bearerToken =
   "AAAAAAAAAAAAAAAAAAAAAEgfkAEAAAAA%2FodlzBdB9PDjf6AzhmL96z48RCQ%3DCJUEkmesuI7n26khHklAP8MzJ1TalghAZ6THKsrs9qpE26fQOY";
 
+let test = "test";
+
 export async function getFollowing() {
   let users = [];
   let params = {
@@ -52,7 +54,7 @@ export async function getFollowing() {
   //console.log(users);
   console.log(`Got ${users.length} users.`);
   return users;
-};
+}
 
 const getPage = async (params, options, nextToken) => {
   if (nextToken) {
@@ -74,4 +76,4 @@ const getPage = async (params, options, nextToken) => {
 
 //getFollowing();
 
-export default  getFollowing;
+export default getFollowing;
